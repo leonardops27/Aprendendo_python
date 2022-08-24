@@ -5,10 +5,13 @@ Depois disso, mostre a listagem de números gerados e também indique o menor e 
 from random import randint
 
 print('Código 01:')
-maior = int(0)
-menor = int(10)
-for x in range (1,6):
-    n1 = randint(1,10)
+vezes = int(input('Quantos números quer ver: '))
+maior = int(input('Apartir de qual número quer ver?: ')) # controle de maior > que.
+menor = int(input('Até qual número quer ver?: ')) # controle de menor < que.
+faixa_menor = maior
+faixa_maior = menor
+for x in range (0,vezes): # aqui escolhe quanto números quer visualizar
+    n1 = randint(faixa_menor,faixa_maior) # faixa dos números a serem gerados
     n = n1
     if n1 > maior:
         maior = n1
